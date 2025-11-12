@@ -48,21 +48,21 @@ esg_consultant/
 | |-- (Place your PDFs here, e.g., 'esg_report_2024.pdf')
 |
 |-- app.py
-| \# The main Streamlit web application.
-| \# This file runs the UI, handles user queries, coordinates the multi-step
-| \# LLM chains, and renders the final report and graphs.
+|  The main Streamlit web application.
+|  This file runs the UI, handles user queries, coordinates the multi-step
+|  LLM chains, and renders the final report and graphs.
 |
 |-- ingest.py
-| \# A one-time setup script.
-| \# It reads all PDFs from the /docs folder, splits them into chunks,
-| \# generates embeddings, and saves them to the local ChromaDB.
+|  A one-time setup script.
+|  It reads all PDFs from the /docs folder, splits them into chunks,
+|  generates embeddings, and saves them to the local ChromaDB.
 |
 |-- requirements.txt
-| \# A list of all necessary Python packages for the project.
+|  A list of all necessary Python packages for the project.
 |
 |-- chroma_db/
-| \# (This folder is created automatically after running ingest.py)
-| \# This is the persistent local vector database.
+| (This folder is created automatically after running ingest.py)
+| This is the persistent local vector database.
 
 ---
 
