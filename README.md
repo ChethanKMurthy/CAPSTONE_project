@@ -42,7 +42,7 @@ This project is built with a modern, all-Python stack:
 
 Here is a breakdown of the key files and what they do:
 
-esg_consultant/
+```esg_consultant/
 |
 |-- docs/
 | |-- (Place your PDFs here, e.g., 'esg_report_2024.pdf')
@@ -63,7 +63,7 @@ esg_consultant/
 |-- chroma_db/
 | (This folder is created automatically after running ingest.py)
 | This is the persistent local vector database.
-
+```
 ---
 
 ## 🚀 How to Run the Application
