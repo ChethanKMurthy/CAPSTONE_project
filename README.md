@@ -1,4 +1,4 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
 
 
 
@@ -82,6 +82,7 @@ Clone this project to your local machine:
 ```bash
 git clone https://your-repo-url/esg_consultant.git
 cd esg_consultant
+```
 
 
 Step 2: Set Up a Virtual Environment & Install Dependencies
@@ -89,23 +90,22 @@ Step 2: Set Up a Virtual Environment & Install Dependencies
 Create and activate a virtual environment to keep your dependencies isolated:
 Bash
 # Create the environment
-python -m venv venv
+```python -m venv venv```
 
 # Activate it
 # On macOS/Linux:
-source venv/bin/activate
+```source venv/bin/activate```
 # On Windows:
-.\venv\Scripts\activate
+```.\venv\Scripts\activate```
 
 # Install all required packages
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 
 Step 3: Download the LLM
 
 In your terminal, pull the llama3.2:3b model. This only needs to be done once.
-Bash
-ollama pull llama3.2:3b
+```ollama pull llama3.2:3b```
 
 (Make sure the Ollama application is running while you do this.)
 
@@ -116,16 +116,14 @@ Place all your company's PDF files (ESG reports, compliance policies, etc.) into
 Step 5: Ingest Your Data
 
 This is a one-time step to "teach" the AI your documents. If you add new PDFs later, you will need to run this script again.
-Bash
-python ingest.py
+```python ingest.py```
 
 This script will process all the files in the docs/ folder and create a new chroma_db/ directory.
 
 Step 6: Run the Web App!
 
 You are now ready to launch the application.
-Bash
-streamlit run app.py
+```streamlit run app.py```
 
 Streamlit will automatically open the application in your default web browser (usually at http://localhost:8501).
 
@@ -150,26 +148,6 @@ Authentication: Add a simple authentication layer (e.g., Streamlit's st.secrets)
 Feedback Mechanism: Add a "thumbs up/down" button to log and review the AI's responses, allowing for continuous improvement.
 Contributions and ideas are welcome!
 
-Here is the complete README.md content you can create for your project:
-
-```markdown
-# 🤖 Advanced ESG Consultant AI
-
-This is an AI-powered web application that acts as an expert ESG (Environmental, Social, and Governance) consultant.
-
-Unlike a simple Q&A bot, this tool performs an advanced, multi-step analysis. It leverages a local Large Language Model (LLM) to compare general, industry-wide ESG risks against the specific policies and data found in your company's internal documents.
-
-The application then generates a "Compliance Gap Analysis" report, identifies areas where your company's documentation is silent, and provides actionable recommendations. Finally, it can instantly generate a visual summary of its findings.
-
-## ✨ Key Features
-
-* **Automated Compliance Gap Analysis:** Generates a report that compares your company's policies (from your PDFs) against common industry risks.
-* **Intelligent RAG:** Uses Retrieval-Augmented Generation (RAG) to ground all answers in your specific documents.
-* **Dynamic Visualizations:** Generates bar charts on the fly to provide a visual summary of compliance levels for different risk areas.
-* **Industry-Specific Risk Analysis:** Uses the LLM's external knowledge to identify common violations for any industry you specify (e.g., "Technology", "Manufacturing").
-* **100% Local & Private:** Runs entirely on your local machine using Ollama, ensuring your sensitive ESG documents are never sent to a third-party server.
-
----
 
 ## 🛠️ Tools & Technologies
 
